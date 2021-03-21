@@ -9,12 +9,10 @@ class StatsApp {
     minInput: HTMLInputElement;
     maxInput: HTMLInputElement;
     constructor(){
-        this.startApp();
-    }
-    startApp(){
         this.getInputs();
         this.watchInputValues();
     }
+
     getInputs(){
         this.data1Input = document.querySelector('#data1');
         this.data2Input = document.querySelector('#data2');
@@ -49,6 +47,7 @@ class StatsApp {
         this.avgInput.value = avg.toString();
         this.minInput.value = min.toString();
         this.maxInput.value = max.toString();
+    
     }
 }
 const statsApp = new StatsApp();
