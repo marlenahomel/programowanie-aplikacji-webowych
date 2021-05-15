@@ -1,0 +1,29 @@
+body{
+    width: 800px;
+    margin: auto;
+    text-align: center;
+}
+.nav{
+    width:170px;
+    height:35px;
+    margin:3px;
+    font-size:15px;
+    border-radius:5px;
+    background-color:lightcoral;
+    color: white;
+    padding:3px;
+
+}
+.pad{
+    width: 100px;
+    height: 100px;
+    margin:10px;
+    border-radius: 20px;
+    font-size: 30px;
+    background-color: gray;
+    color: black;
+}
+.pad:active{
+    background-color: lightblue;
+    color: white;
+}

@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Drumkit</title>
 </head>
 <body>
-    
-    <button id="channel1Play"> Play channel 1 </button>
-
     <audio src="sounds/tom.wav" id="tom"></audio>
     <audio src="sounds/tink.wav" id="tink"></audio>
     <audio src="sounds/snare.wav" id="snare"></audio>
@@ -20,6 +18,33 @@
     <audio src="sounds/boom.wav" id="boom"></audio>
     <audio src="sounds/clap.wav" id="clap"></audio>
     <audio src="sounds/kick.wav" id="kick"></audio>
+
+    <button class="pad">Q</button>
+    <button class="pad">W</button>
+    <button class="pad">E</button>
+    <button class="pad">R</button>
+    <button class="pad">T</button><br/>
+    <button class="pad">A</button>
+    <button class="pad">S</button>
+    <button class="pad">D</button>
+    <button class="pad">F</button> <br/> <br/>
+
+
+    <button class="nav" id="channel1Record"> Record on channel 1 </button>
+    <button class="nav" id="channel1Play"> Play channel 1 </button> <br/>
+
+    <button class="nav" id="channel2Record"> Record on channel 2 </button>
+    <button class="nav" id="channel2Play"> Play channel 2 </button> <br/>
+
+    <button class="nav" id="channel3Record"> Record on channel 3 </button>
+    <button class="nav" id="channel3Play"> Play channel 3 </button> <br/>
+
+    <button class="nav" id="channel4Record"> Record on channel 4 </button>
+    <button class="nav" id="channel4Play"> Play channel 4 </button> <br/>
+
+
+
+
     <script src= "index.js"></script>
 </body>
 </html>
