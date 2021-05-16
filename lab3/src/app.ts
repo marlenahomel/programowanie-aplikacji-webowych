@@ -1,30 +1,24 @@
-export class App {
-    opwApiKey = 'd7f3aa98cf1c6874807647fa803af714';
+import {LocalStorage} from './localStorage'
+import {WeatherApi} from './weatherApi'
 
-    constructor(){
-        this.getCityInfo('zakopane')
+export class App{
+    private localStorage1: LocalStorage;
+    private weatherApi: WeatherApi;
+
+    public constructor(){
+        document.addEventListener('keypress', this.onKeyPress);
     }
-    async getCityInfo(city: string){
-        const weather = await this.getWeather('zakopane');
-        this.saveData(weather);
-    }  
-    
-    async getWeather(city: string): Promise<any> {
-        const openWeatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.opwApiKey}';
-        const weatherResponse = await fetch(openWeatherUrl);
-        const weatherData = await weatherResponse.json();
-        console.log(weatherData);
-        return weatherData;
-    }
-    saveData(data: any){
-        localStorage.setItem('weatherData', JSON.stringify(data));
-    }
-    getData(){
-        const data = localStorage.getItem('weatherData');
-        if(data){
-            return JSON.parse(data);
-        } else {
-            return {};
+
+    onKeyPress(ev: KeyboardEvent): void{
+        if(ev.key == 'Enter'){
+           let nameOfCity :  HTMLInputElement= document.querySelector("#city");
+           let name: string = nameOfCity.value;
+           if(name){
+                let localStorage1= new LocalStorage("cities");
+                localStorage1.addCity(name);
+                let weatherApi2= new WeatherApi(localStorage1.getCity());
+                weatherApi2.addNewCity(name);
+            }
+           }
         }
     }
-}
