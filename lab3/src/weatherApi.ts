@@ -17,7 +17,7 @@ export class WeatherApi{
         <br/>Temperature: `+ Math.round(weatherData.main.temp - 273.15)+`&deg;C 
         <br/>Pressure: `+weatherData.main.pressure+` hPA
         <br/>Humidity: `+weatherData.main.humidity+` %
-        </h3>`;
+        </h3></div>`;
         citiesContainer.innerHTML +=weatherBox;
 
     }
