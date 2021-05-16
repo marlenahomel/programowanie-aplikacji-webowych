@@ -15,7 +15,7 @@ export class CreateNote{
         </div>`
         notesContainer.innerHTML +=noteBox;
     }
-    addNewCity(notes: string){
+    addNewNote(notes: string){
         this.notesArray.push(notes);
     }
     createNotesBlocks(){

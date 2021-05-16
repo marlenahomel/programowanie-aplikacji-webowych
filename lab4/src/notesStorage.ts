@@ -14,12 +14,12 @@ export class NotesStorage{
         }
     }
 
-    getCity(): string[]{
+    getNote(): string[]{
         let tab: string[] = localStorage.getItem(this.note).split("-");
         return tab;
     }
 
-    addCity(name: string): void{
+    addNote(name: string): void{
         if(this.isNotNull()){
             let tab: string[] = localStorage.getItem(this.note).split("-");
             tab.push(name);

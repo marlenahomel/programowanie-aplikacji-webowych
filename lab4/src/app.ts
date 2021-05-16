@@ -15,9 +15,9 @@ export class App{
            let note: string = enteredNote.value;
            if(note){
                 let notesStorage= new NotesStorage("notes");
-                notesStorage.addCity(note);
-                let createNote1= new CreateNote(notesStorage.getCity());
-                createNote1.addNewCity(note);
+                notesStorage.addNote(note);
+                let createNote1= new CreateNote(notesStorage.getNote());
+                createNote1.addNewNote(note);
             }
            }
         }
