@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack-dev-server --content-base src",
     "build": "webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^26.0.23",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.2",
     "node-sass": "^4.14.1",
@@ -23,5 +24,10 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/puppeteer": "^5.4.3",
+    "puppeteer": "^10.0.0",
+    "puppeteer-tsd": "0.0.2",
+    "ts-jest": "^27.0.3"
+  }
 }

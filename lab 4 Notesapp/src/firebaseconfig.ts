@@ -6,3 +6,7 @@ export const firebaseConfig = {
     messagingSenderId: "171340936069",
     appId: "1:171340936069:web:273969ddf099d83edd8aec"
   };
+
+  type ENV = 'firebase' | 'ls';
+  const environment: ENV = 'ls';
+  export default environment;

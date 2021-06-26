@@ -1,0 +1,143 @@
+body{
+    background-color: lightgray;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#x{
+    margin-left:220px;
+}
+
+.delbtn{
+    position: absolute;
+    left:80%;
+    top: 10%;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+}
+
+.delbtn:hover{
+    background-color: black;
+    color: white;
+    font-size: 11px;
+}
+
+#title{
+  margin-top:20px;
+  width: 90px;
+  height: 20px;
+  font-size: 12px;
+}
+
+#body{
+ width:200px;
+ height: 20px;
+ font-size: 12px;
+ margin: 20px;
+}
+
+h1{
+    font-size: 30px;
+    float: left;
+    margin-left:50px;
+}
+
+.addNote{
+    float: left;
+}
+
+.noteBox{
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: left;
+    border: 1px solid rgb(199, 189, 189);
+    margin: 10px;
+    width: 200px;
+    height: 220px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 5px rgb(41, 40, 40);
+}
+
+h2{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+h4{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.cont{
+    position: absolute;
+}
+
+#noteBlocks{
+  width: 100%;
+  padding: 30px;
+}
+
+
+#noteBlocksPinned{
+    margin-bottom: 100px;
+    padding: 30px;
+    width: 100%;
+}
+
+.cb{
+    clear: both;
+}
+
+$colors: (
+  red: red,
+  orange: orange,
+  yellow: yellow,
+  green: green,
+  blue: blue,
+  purple:purple,
+  pink: pink,
+);
+
+* {
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  display: none;
+  &:checked + label {
+    span { transform: scale(1.25); }
+    @each $name, $value in $colors {
+      .#{$name} {
+        border: 2px solid darken($value, 25%);
+      }
+    } 
+  } 
+}
+
+label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  &:hover {
+    span { 
+      transform: scale(1.25); 
+    }
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .2s ease-in-out;
+    @each $name, $value in $colors {
+      &.#{$name} {
+        background: $value;
+      }
+    }
+  }
+}
